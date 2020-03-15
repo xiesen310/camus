@@ -9,7 +9,8 @@
   </parent>
 
   <artifactId>camus-api</artifactId>
-  <name>Camus API.</name>
+  <name>camus-api</name>
+  <description>Camus API.</description>
   <packaging>jar</packaging>
 
   <dependencies>

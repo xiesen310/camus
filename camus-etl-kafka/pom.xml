@@ -9,7 +9,8 @@
 	</parent>
 
 	<artifactId>camus-etl-kafka</artifactId>
-	<name>Camus ETL to move data from Kafka to Hadoop.</name>
+	<name>camus-etl-kafka</name>
+	<description>Camus ETL to move data from Kafka to Hadoop.</description>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>

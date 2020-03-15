@@ -9,7 +9,8 @@
   </parent>
 
   <artifactId>camus-example</artifactId>
-  <name>Camus Examples</name>
+  <name>camus-example</name>
+  <description>Camus Examples</description>
   <packaging>jar</packaging>
 
   <dependencies>

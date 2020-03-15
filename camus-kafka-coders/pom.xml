@@ -9,7 +9,8 @@
 	</parent>
 
 	<artifactId>camus-kafka-coders</artifactId>
-	<name>Camus Kafka producer</name>
+	<name>camus-kafka-coders</name>
+	<description>Camus Kafka producer</description>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
