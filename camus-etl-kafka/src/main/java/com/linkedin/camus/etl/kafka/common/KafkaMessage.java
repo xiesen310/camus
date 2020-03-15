@@ -9,6 +9,7 @@ import java.io.IOException;
  * Created by michaelandrepearce on 05/04/15.
  */
 public class KafkaMessage implements com.linkedin.camus.coders.Message {
+    private Long NoTimestamp = -1L;
 
     byte[] payload;
     byte[] key;
@@ -19,7 +20,7 @@ public class KafkaMessage implements com.linkedin.camus.coders.Message {
     private long checksum = 0;
 
 
-    public KafkaMessage(byte[] payload, byte[] key, String topic, int partition, long offset, long checksum){
+    public KafkaMessage(byte[] payload, byte[] key, String topic, int partition, long offset, long checksum) {
         this.payload = payload;
         this.key = key;
         this.topic = topic;
@@ -61,10 +62,11 @@ public class KafkaMessage implements com.linkedin.camus.coders.Message {
     public void validate() throws IOException {
         // check the checksum of message.
         Message readMessage;
-        if (key == null){
+        if (key == null) {
             readMessage = new Message(payload);
         } else {
-            readMessage = new Message(payload, key);
+            byte a = '1';
+            readMessage = new Message(payload, -1L, a);
         }
 
         if (checksum != readMessage.checksum()) {
